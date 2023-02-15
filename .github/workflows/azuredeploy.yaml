@@ -32,6 +32,10 @@ env:
 jobs:
   deploy_arm_templates:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     steps:
     - name: Checkout Source Code
       uses: actions/checkout@v2
